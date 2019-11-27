@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8c8a3c75-3906-44d5-8783-8bfc8bc5b459" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="JUnit" name="PromocaoSortidaTest" />
+    </enabled-run-configurations>
+  </component>
+  <component name="ProjectId" id="1TCOYlF0z1R7uThmzGmkWNsgPA1" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/junit-4.13-rc-1.jar!/" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="tasks" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.PromocaoSortidaTest.testGetNome">
+    <configuration name="PromocaoSortidaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="food-queen-master" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.promocao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="model.promocao.PromocaoSortidaTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PromocaoSortidaTest.testGetDesconto_Consumidor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="food-queen-master" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.promocao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="model.promocao.PromocaoSortidaTest" />
+      <option name="METHOD_NAME" value="testGetDesconto_Consumidor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PromocaoSortidaTest.testGetNome" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="food-queen-master" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.promocao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="model.promocao.PromocaoSortidaTest" />
+      <option name="METHOD_NAME" value="testGetNome" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PromocaoSortidaTest.testGetNome" />
+        <item itemvalue="JUnit.PromocaoSortidaTest.testGetDesconto_Consumidor" />
+        <item itemvalue="JUnit.PromocaoSortidaTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c8a3c75-3906-44d5-8783-8bfc8bc5b459" name="Default Changelist" comment="" />
+      <created>1572960661524</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572960661524</updated>
+      <workItem from="1572960664950" duration="1134000" />
+      <workItem from="1573085971340" duration="1465000" />
+      <workItem from="1573129453296" duration="84000" />
+      <workItem from="1573556081980" duration="712000" />
+      <workItem from="1574127545335" duration="43000" />
+      <workItem from="1574128241759" duration="742000" />
+      <workItem from="1574132905687" duration="427000" />
+      <workItem from="1574294370753" duration="689000" />
+      <workItem from="1574732200451" duration="641000" />
+      <workItem from="1574733382467" duration="481000" />
+      <workItem from="1574734496557" duration="1248000" />
+      <workItem from="1574735759559" duration="1551000" />
+      <workItem from="1574814998679" duration="480000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
