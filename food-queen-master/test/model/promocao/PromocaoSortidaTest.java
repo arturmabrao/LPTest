@@ -3,6 +3,7 @@ package model.promocao;
 
 
 import java.util.GregorianCalendar;
+import javax.servlet.http.HttpServletRequest;
 import static javax.swing.UIManager.get;
 import org.junit.*;
 import model.Consumidor;
@@ -14,6 +15,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import junit.framework.*;
 import org.easymock.*;
+import static org.easymock.EasyMock.createMock;
 
 /**
  *
@@ -27,6 +29,7 @@ public class PromocaoSortidaTest extends TestCase{
     }
     
     GregorianCalendar calendar = new GregorianCalendar();
+    
     private Consumidor consumidor; 
     private PromocaoSortida promo;   
     int dia;
@@ -154,6 +157,28 @@ public class PromocaoSortidaTest extends TestCase{
         dia = 22;
         
         float expResult = 48;
+        float result = promo.getDesconto(consumidor, dia);
+        
+        assertEquals(expResult, result);
+    }
+    
+    @org.junit.Test
+    public void testGetDesconto_ConsumidorIdMaiorQueDiaRestoMenor31() {
+        consumidor.setId(61);
+        dia = 31;
+        
+        float expResult = 51;
+        float result = promo.getDesconto(consumidor, dia);
+        
+        assertEquals(expResult, result);
+    }
+    
+    @org.junit.Test
+    public void testGetDesconto_ConsumidorIdMaiorQueDiaRestoMenor() {
+        consumidor.setId(63);
+        dia = 32;
+        
+        float expResult = 0;
         float result = promo.getDesconto(consumidor, dia);
         
         assertEquals(expResult, result);

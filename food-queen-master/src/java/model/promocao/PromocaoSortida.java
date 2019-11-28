@@ -31,6 +31,7 @@ public class PromocaoSortida implements Promocao{
         int idnt = cons.getId();
         int oper = idnt%dia;
         
+        if(dia<32){
         if(idnt < 32){
             if(dia<16){
                 return dia*2;
@@ -53,9 +54,12 @@ public class PromocaoSortida implements Promocao{
         }else if(oper<31){
             return 51.0f;
         }
+        }else{
         
         return 0.0f;
     }
+        return 0;
+}
  
     @Override
     public float getDesconto() {
