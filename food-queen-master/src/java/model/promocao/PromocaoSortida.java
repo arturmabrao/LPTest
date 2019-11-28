@@ -27,19 +27,17 @@ public class PromocaoSortida implements Promocao{
     }
 
     
-    public float getDesconto(Consumidor cons) {
-        float dia = (float)get(GregorianCalendar.DAY_OF_MONTH);
-        float idnt = (float) cons.getId();
-        float oper = idnt%dia;
+    public float getDesconto(Consumidor cons, int dia) {
+        int idnt = cons.getId();
+        int oper = idnt%dia;
         
-        if(idnt > 0 && idnt < 32){
-            if(dia<15){
+        if(idnt < 32){
+            if(dia<16){
                 return dia*2;
             }else{
                 return dia;
             }
         }
-        
         if(oper==0){
             return 23.0f;
         }else if(oper<6){
@@ -55,9 +53,10 @@ public class PromocaoSortida implements Promocao{
         }else if(oper<31){
             return 51.0f;
         }
-        return 10.0f;
+        
+        return 0.0f;
     }
-
+ 
     @Override
     public float getDesconto() {
         return 5;

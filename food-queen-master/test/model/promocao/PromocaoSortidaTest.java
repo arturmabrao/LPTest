@@ -20,13 +20,16 @@ import org.easymock.*;
  * @author Artur
  */
 public class PromocaoSortidaTest extends TestCase{
+   
     
     public PromocaoSortidaTest() {
         
     }
     
+    GregorianCalendar calendar = new GregorianCalendar();
     private Consumidor consumidor; 
     private PromocaoSortida promo;   
+    int dia;
     
     @BeforeClass
     public static void setUpClass() {
@@ -68,27 +71,116 @@ public class PromocaoSortidaTest extends TestCase{
 
 
     @org.junit.Test
-    public void testGetDesconto_ConsumidorDiaMenor() {
+    public void testGetDesconto_ConsumidorIdMenorDia() {
         consumidor.setId(1);
+        dia = 1;
         
-        float expResult = (float)get(GregorianCalendar.DAY_OF_MONTH)*2;
-        float result = promo.getDesconto(consumidor);
+        float expResult = dia*2;
+        float result = promo.getDesconto(consumidor, dia);
         
         assertEquals(expResult, result);
     }
     
 
     @org.junit.Test
-    public void testGetDesconto_ConsumidorDiaMaior() {
+    public void testGetDesconto_ConsumidorIdMaiorDia() {
         consumidor.setId(31);
+        dia = 31;
         
-        float expResult = (float)get(GregorianCalendar.DAY_OF_MONTH);
-        float result = promo.getDesconto(consumidor);
+        float expResult = dia;
+        float result = promo.getDesconto(consumidor, dia);
         
         assertEquals(expResult, result);
     }
 
-
+@org.junit.Test
+    public void testGetDesconto_ConsumidorIdMaiorQueDiaResto0() {
+        consumidor.setId(32);
+        dia = 16;
+        
+        float expResult = 23;
+        float result = promo.getDesconto(consumidor, dia);
+        
+        assertEquals(expResult, result);
+    }
+    
+@org.junit.Test
+    public void testGetDesconto_ConsumidorIdMaiorQueDiaRestoMenor6() {
+        consumidor.setId(32);
+        dia = 27;
+        
+        float expResult = 28;
+        float result = promo.getDesconto(consumidor, dia);
+        
+        assertEquals(expResult, result);
+    }
+    
+@org.junit.Test
+    public void testGetDesconto_ConsumidorIdMaiorQueDiaRestoMenor11() {
+        consumidor.setId(32);
+        dia = 22;
+        
+        float expResult = 33;
+        float result = promo.getDesconto(consumidor, dia);
+        
+        assertEquals(expResult, result);
+    }
+    
+@org.junit.Test
+    public void testGetDesconto_ConsumidorIdMaiorQueDiaRestoMenor16() {
+        consumidor.setId(32);
+        dia = 17;
+        
+        float expResult = 38;
+        float result = promo.getDesconto(consumidor, dia);
+        
+        assertEquals(expResult, result);
+    }
+    
+@org.junit.Test
+    public void testGetDesconto_ConsumidorIdMaiorQueDiaRestoMenor21() {
+        consumidor.setId(42);
+        dia = 22;
+        
+        float expResult = 43;
+        float result = promo.getDesconto(consumidor, dia);
+        
+        assertEquals(expResult, result);
+    }
+    
+    @org.junit.Test
+    public void testGetDesconto_ConsumidorIdMaiorQueDiaRestoMenor26() {
+        consumidor.setId(43);
+        dia = 22;
+        
+        float expResult = 48;
+        float result = promo.getDesconto(consumidor, dia);
+        
+        assertEquals(expResult, result);
+    }
+    
+    @org.junit.Test
+    public void testGetDesconto_ConsumidorIdZero() {
+        consumidor.setId(0);
+        dia = 16;
+        
+        float expResult = 16;
+        float result = promo.getDesconto(consumidor, dia);
+        
+        assertEquals(expResult, result);
+    }
+    
+    @org.junit.Test
+    public void testGetDesconto_ConsumidorIdZeroDiaMaior15() {
+        consumidor.setId(0);
+        dia = 14;
+        
+        float expResult = 28;
+        float result = promo.getDesconto(consumidor, dia);
+        
+        assertEquals(expResult, result);
+    }
+    
     @org.junit.Test
     public void testGetDesconto_0args() {
         PromocaoSortida instance = new PromocaoSortida();
