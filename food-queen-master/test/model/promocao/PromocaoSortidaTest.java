@@ -3,19 +3,12 @@ package model.promocao;
 
 
 import java.util.GregorianCalendar;
-import javax.servlet.http.HttpServletRequest;
-import static javax.swing.UIManager.get;
-import org.junit.*;
 import model.Consumidor;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
 import junit.framework.*;
-import org.easymock.*;
-import static org.easymock.EasyMock.createMock;
 
 /**
  *
@@ -53,7 +46,7 @@ public class PromocaoSortidaTest extends TestCase{
     public void tearDown() {
     }
 
-
+/*
     @org.junit.Test
     public void testGetNome() {
         PromocaoSortida instance = new PromocaoSortida();
@@ -71,7 +64,15 @@ public class PromocaoSortidaTest extends TestCase{
         assertEquals(expResult, result);
         
     }
-
+    
+    @org.junit.Test
+    public void testGetDesconto_0args() {
+        PromocaoSortida instance = new PromocaoSortida();
+        float expResult = 5.0F;
+        float result = instance.getDesconto();
+        assertEquals(expResult, result, 0.0);
+    }
+*/
 
     @org.junit.Test
     public void testGetDesconto_ConsumidorIdMenorDia() {
@@ -87,23 +88,25 @@ public class PromocaoSortidaTest extends TestCase{
 
     @org.junit.Test
     public void testGetDesconto_ConsumidorIdMaiorDia() {
+        //Arrage
         consumidor.setId(31);
         dia = 31;
-        
+        //Act
         float expResult = dia;
         float result = promo.getDesconto(consumidor, dia);
-        
+        //Assert
         assertEquals(expResult, result);
     }
 
 @org.junit.Test
     public void testGetDesconto_ConsumidorIdMaiorQueDiaResto0() {
+        //Arrage
         consumidor.setId(32);
         dia = 16;
-        
+        //Act
         float expResult = 23;
         float result = promo.getDesconto(consumidor, dia);
-        
+        //Assert
         assertEquals(expResult, result);
     }
     
@@ -204,14 +207,5 @@ public class PromocaoSortidaTest extends TestCase{
         float result = promo.getDesconto(consumidor, dia);
         
         assertEquals(expResult, result);
-    }
-    
-    @org.junit.Test
-    public void testGetDesconto_0args() {
-        PromocaoSortida instance = new PromocaoSortida();
-        float expResult = 5.0F;
-        float result = instance.getDesconto();
-        assertEquals(expResult, result, 0.0);
-    }
-    
+    }    
 }
