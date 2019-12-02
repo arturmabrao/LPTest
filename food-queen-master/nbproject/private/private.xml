@@ -4,8 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Studies/Java/LPTest/food-queen-master/src/java/model/Consumidor.java</file>
-            <file>file:/C:/Studies/Java/LPTest/food-queen-master/src/java/model/promocao/PromocaoSortida.java</file>
-            <file>file:/C:/Studies/Java/LPTest/food-queen-master/test/model/promocao/PromocaoSortidaTest.java</file>
+            <file>file:/C:/Studies/Java/LPTest/food-queen-master/test/model/ProdutoTest.java</file>
+            <file>file:/C:/Studies/Java/LPTest/food-queen-master/src/java/model/promocao/Promocao.java</file>
+            <file>file:/C:/Studies/Java/LPTest/food-queen-master/src/java/model/Produto.java</file>
+            <file>file:/C:/Studies/Java/LPTest/food-queen-master/src/java/model/promocao/PromocaoPadrao.java</file>
         </group>
     </open-files>
 </project-private>

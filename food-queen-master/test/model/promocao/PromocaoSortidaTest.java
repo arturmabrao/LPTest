@@ -46,7 +46,7 @@ public class PromocaoSortidaTest extends TestCase{
     public void tearDown() {
     }
 
-/*
+
     @org.junit.Test
     public void testGetNome() {
         PromocaoSortida instance = new PromocaoSortida();
@@ -72,7 +72,7 @@ public class PromocaoSortidaTest extends TestCase{
         float result = instance.getDesconto();
         assertEquals(expResult, result, 0.0);
     }
-*/
+
 
     @org.junit.Test
     public void testGetDesconto_ConsumidorIdMenorDia() {

@@ -19,7 +19,7 @@ public class PromocaoPadrao implements Promocao {
 
     @Override
     public float getDesconto() {
-        return 15;
+        return 15.0f;
     }
 
 }
