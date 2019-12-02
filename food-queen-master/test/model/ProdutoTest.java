@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model;
 
 import model.promocao.Promocao;
@@ -22,11 +17,11 @@ import static org.easymock.EasyMock.*;
  */
 public class ProdutoTest {
     
+    private Promocao promo = createMock(Promocao.class);
+    
     public ProdutoTest() {
     
     }
-    private PromocaoPadrao promo = createMock(PromocaoPadrao.class);
-    
     
     @BeforeClass
     public static void setUpClass() {
@@ -46,7 +41,10 @@ public class ProdutoTest {
     
     @Test
     public void testGetPrecoDeVendaPromocional() {
-        
+        //expect(promo.getId()).andReturn(3);
+        //expect(promo.getNome()).andReturn("Padrao");
+        expect(promo.getDesconto()).andReturn(15.0f);
+        replay(promo);
         
         Produto produto = new Produto(); 
         produto.setPreco("50");

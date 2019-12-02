@@ -17,16 +17,17 @@ import junit.framework.*;
 public class PromocaoSortidaTest extends TestCase{
    
     
-    public PromocaoSortidaTest() {
-        
-    }
-    
     GregorianCalendar calendar = new GregorianCalendar();
     
     private Consumidor consumidor; 
     private PromocaoSortida promo;   
     int dia;
     
+    
+    public PromocaoSortidaTest() {
+        
+    }
+        
     @BeforeClass
     public static void setUpClass() {
         
